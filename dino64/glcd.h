@@ -3,7 +3,6 @@
 
 #include <REGX52.H>
 
-// GLCD control pins (adjust to your Proteus circuit)
 sbit RS = P2^0;
 sbit RW = P2^1;
 sbit EN = P2^2;
@@ -11,10 +10,8 @@ sbit CS1 = P2^3;
 sbit CS2 = P2^4;
 sbit RST = P2^5;
 
-// Data port
 #define DATA_PORT P1
 
-// External reference to font array (defined in font_header.h)
 extern unsigned char code font[][5];
 
 void glcd_init();

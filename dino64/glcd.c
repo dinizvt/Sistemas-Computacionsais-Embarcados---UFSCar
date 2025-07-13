@@ -1,7 +1,6 @@
 #include "glcd.h"
 #include "font_header.h"
 
-// Optimized delay - removed unnecessary overhead
 void delay_us(unsigned char us) {
 	while(us--);
 }
@@ -47,7 +46,6 @@ void clear_area(unsigned char x, unsigned char y_page, unsigned char width, unsi
     }
 }
 
-// Simplified string function - optimized for memory usage
 void glcd_string(unsigned char page, unsigned char x, char *str) {
 	unsigned char i, j;
 	
@@ -84,7 +82,6 @@ void glcd_init() {
 	CS1 = 1;
 }
 
-// Optimized clear function - reduced variable usage
 void glcd_clear() {
 	unsigned char page, col;
 	for (page = 0; page < 8; page++) {
@@ -95,7 +92,6 @@ void glcd_clear() {
 	}
 }
 
-// Optimized bitmap drawing - reduced variable usage
 void glcd_draw_bitmap(unsigned char x, unsigned char y_page, unsigned char width, unsigned char height_pages, unsigned char *bitmap) {
 	unsigned char i, j;
 	for (j = 0; j < height_pages; j++) {

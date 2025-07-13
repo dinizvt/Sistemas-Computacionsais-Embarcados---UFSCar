@@ -1,9 +1,6 @@
 #ifndef	FONT_HEADER_H_
 #define	FONT_HEADER_H_
 
-
-// Optimized font array - stored in code memory to save RAM
-// Only includes essential characters (space, digits, uppercase letters)
 unsigned char code font[][5] = {
  {0x00, 0x00, 0x00, 0x00, 0x00}, // 20 (Space) 
  {0x00, 0x00, 0x5f, 0x00, 0x00}, // 21 !

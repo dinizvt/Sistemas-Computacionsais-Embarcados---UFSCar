@@ -1,6 +1,5 @@
 #include "car_bitmap.h"
 
-// Definitions of bitmaps stored in code memory
 unsigned char car_bitmap[28] = {
     // Page 6 (Y: 48–55)
     0x7E, 0x7E, 0x18, 0xFF, 0xFF, 0xCF, 0xCF,
