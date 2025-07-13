@@ -14,13 +14,16 @@ sbit RST = P2^5;
 // Data port
 #define DATA_PORT P1
 
+// External reference to font array (defined in font_header.h)
+extern unsigned char code font[][5];
+
 void glcd_init();
 void glcd_clear();
 void glcd_command(unsigned char cmd);
 void glcd_data(unsigned char d);
+void glcd_string(unsigned char page, unsigned char x, char *str);
 void glcd_set_cursor(unsigned char x, unsigned char y);
-void glcd_display_bitmap(unsigned char *bitmap);
-void glcd_draw_pixel(unsigned char x, unsigned char y, bit color);
 void glcd_draw_bitmap(unsigned char x, unsigned char y_page, unsigned char width, unsigned char height_pages, unsigned char *bitmap);
+void clear_area(unsigned char x, unsigned char y_page, unsigned char width, unsigned char height_pages);
 
 #endif
