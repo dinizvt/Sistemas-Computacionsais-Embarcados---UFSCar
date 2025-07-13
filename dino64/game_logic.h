@@ -3,7 +3,7 @@
 
 #include <REGX52.H>
 #include "glcd.h"
-#include "car_bitmap.h"
+#include "bitmaps.h"
 #include "utils.h"
 
 /* Screen dimensions */

@@ -1,6 +1,6 @@
 #include <REGX52.H>
 #include "glcd.h"
-#include "car_bitmap.h"
+#include "bitmaps.h"
 #include "game_logic.h"
 #include "utils.h"
 
