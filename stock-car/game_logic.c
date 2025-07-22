@@ -59,8 +59,8 @@ void draw_obstacles(void) {
 
 void move_car(unsigned char direction) {
     unsigned char new_x;
-    unsigned char x_llim = left_lane_x[car.y];                /* Left boundary */
-    unsigned char x_rlim = x_llim + R_WIDTH - CAR_W;          /* Right boundary */
+    unsigned char x_llim = left_lane_x[car.y];        /* Left boundary */
+    unsigned char x_rlim = x_llim + R_WIDTH - CAR_W;  /* Right boundary */
     
     new_x = car.x + direction * CAR_MOVE_STEP;
 
@@ -90,11 +90,7 @@ void move_obstacles(void) {
         /* Reset obstacle when it reaches bottom */
         if(obstacle.y_page >= N_PAGES) {
             obstacle.y_page = START_PAGE;
-            
-            /* Cycle through lane positions */
-            obstacle.x_offset += OBSTACLE_W;  
-            if(obstacle.x_offset + OBSTACLE_W > R_WIDTH) 
-                obstacle.x_offset = 0;  
+            obstacle.x_offset = rand8() % (R_WIDTH - OBSTACLE_W);
         }
     }
 }

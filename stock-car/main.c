@@ -66,8 +66,7 @@ void main() {
         btn_right_prev = btn_right;
         /* Game update at fixed intervals */
         game_speed++;
-        if(game_speed > 300) {
-            char score_str[6];
+        if(game_speed > 250) {
             score += 10;
             game_speed = 0;
             
